@@ -1,0 +1,298 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ajuda a controlar o tamanho dos elementos */
+}
+
+/* nav */
+nav {
+    background-color: #070909;
+    font-family: 'Playfair Display', serif;
+}
+nav a {
+    text-decoration: none;
+    color: inherit;
+}
+#item-2{
+    display: flex;
+    align-items: center;
+}
+.lista-nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    font-size: 20px;
+    font-family: 'SUSE', sans-serif;
+}
+
+.lista-nav li {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+    color: #ffffff;
+}
+.nav-link {
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0px 20px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #667471;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+
+
+
+#total-price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+/* Estilo do botão de voltar */
+.back-button {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    background-color: #e91e63;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #c2185b;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+/* Cards de produtos */
+/* Container principal */
+#cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Checkbox fora dos cards */
+.checkbox-container {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    transform: scale(0.5); /* Aumenta o tamanho do checkbox */
+    cursor: pointer;
+}
+
+/* Estilização dos cards */
+.card {
+    width: 350px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-body {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.quantity-input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0;
+    padding: 5px;
+}
+
+.minus, .plus {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #f8f9fa;
+    transition: background-color 0.3s ease;
+}
+
+.minus:hover, .plus:hover {
+    background-color: #ddd;
+}
+
+
+.btn {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background-color: #b71c1c;
+}
+
+.contador{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #c2185b;
+    margin-top: -60px;
+    margin-left: 30px;
+}
+
+
+/* footer */
+
+.rodape {
+    margin-top: 18%;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: Arial, sans-serif;
+}
+
+.rodape-loc {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.rodape-coluna h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.rodape-email{
+    display: flex;
+    align-items: center;
+}
+#text-email{
+    text-align: center;
+}
+
+.rodape-social {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.rodape-paginas {
+    list-style: none;
+    padding: 0;
+}
+
+.rodape-paginas li {
+    margin: 5px 0;
+}
+
+.rodape-paginas a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.rodape-paginas a:hover {
+    text-decoration: underline;
+}
+
+.rodape-direitos {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #fff;
+    padding-top: 10px;
+    font-size: 12px;
+}

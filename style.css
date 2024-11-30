@@ -1,0 +1,444 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Impede o scroll durante a animação */
+}
+
+.section-animação {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(248,187,208,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.logo {
+    transform: translateY(-100%);
+    animation: logoDown 1.5s forwards 0.5s;
+}
+
+.text {
+    transform: translateX(-100%);
+    animation: textIn 1.5s forwards 0.5s;
+}
+
+/* Animações de entrada */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes logoDown {
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes textIn {
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Transição da seção */
+.section-animação.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.5s;
+}
+
+
+/* Transição da seção */
+.section-animação.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.5s;
+}
+.text{
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 15px;
+    margin-bottom: 150px;
+}
+
+
+
+/* nav */
+nav {
+    background-color: #070909;
+    font-family: 'Playfair Display', serif;
+}
+#item-2{
+    display: flex;
+    align-items: center;
+}
+.lista-nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    font-size: 20px;
+    font-family: 'SUSE', sans-serif;
+}
+
+.lista-nav li {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+    color: #ffffff;
+}
+.nav-link {
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0px 20px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #667471;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+.contador{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #c2185b;
+    color: white;
+    margin-top: -60px;
+    margin-left: 30px;
+}
+
+
+/* Section Nova Coleção */
+.Nova-Coleção{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(imagens/fundo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+.seção-coleção {
+    display: flex;
+}
+
+#titulo1 {
+    position: absolute;
+    margin-left: 100px;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 30px;
+    color: #ffffff;
+}
+
+#Nova-Coleção {
+    position: absolute;
+    font-size: 24px;
+    color: #FFC107;
+    margin-left: 550px;
+    margin-top: 90px;
+
+}
+#image2{
+    margin-top: 60px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.text-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20%;
+    margin-right: 100px;
+}
+
+#text-p {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #e2e2e2;
+    text-align: center;
+    margin-right: 50px;
+}
+
+#eu-quero {
+    background-color: #D32F2F; /* Cor do botão */
+    color: #fff; /* Cor do texto do botão */
+    padding: 10px 20px;
+    margin-right: 40px;
+    border: none;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+}
+
+#eu-quero:hover {
+    background-color: #4b1414; 
+}
+#Preciso{
+    text-decoration: none;
+    color: inherit;
+}
+#img-NovaColecao{
+    margin-right: 60px;
+    margin-top: 0px;
+}
+
+/* section catálogo Primavera */
+.Catalogo-Primavera{
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(imagens/6909e34e1fb4ede0ae45c1e2df47eb72.jpg);
+}
+.card1 { 
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    margin: 10px;
+}
+
+.card1:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#comprar {
+    border: none;
+    border-radius: 30px;
+    background-color: #f1007b;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(241, 0, 123, 0.5);
+}
+.comprar-link{
+    text-decoration: none;
+    color: inherit;
+}
+
+#comprar:hover {
+    background-color: #d8006b;
+    box-shadow: 0 6px 12px rgba(241, 0, 123, 0.7);
+}
+
+.CP {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.agrup-1, .agrup-2 {
+    display: flex;
+    justify-content: end;
+    margin-left: 70px;
+}
+.image3{
+    margin-top: 0px;
+}
+#img1 {
+    width: 63px;
+}
+.descriton{
+    font-size: 18px;
+}
+
+
+
+
+
+
+/* Promoções */
+#Promoções{
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px;
+    color: #ffffff;
+}
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 50px 0;
+    max-width: 2000px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.card {
+    display: flex;
+    flex-direction: column; /* Garantir que o conteúdo do card fique empilhado */
+    align-items: center;
+    justify-content: space-between; /* Distribuir o conteúdo uniformemente */
+    width: 250px; /* Tamanho fixo para todos os cards */
+    height: 400px; /* Defina uma altura fixa para igualar todos os cards */
+    margin: 0 10px;
+    padding: 20px; /* Diminui um pouco o padding para se ajustar ao tamanho */
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.card p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #ff1c60;
+}
+
+.old-price {
+    color: red;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.new-price {
+    color: green;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+
+/* rodapé */
+
+.rodape {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: Arial, sans-serif;
+}
+
+.rodape-loc {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.rodape-coluna h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.rodape-email{
+    display: flex;
+    align-items: center;
+}
+#text-email{
+    text-align: center;
+}
+
+.rodape-social {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.rodape-paginas {
+    list-style: none;
+    padding: 0;
+}
+
+.rodape-paginas li {
+    margin: 5px 0;
+}
+
+.rodape-paginas a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.rodape-paginas a:hover {
+    text-decoration: underline;
+}
+
+.rodape-direitos {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #fff;
+    padding-top: 10px;
+    font-size: 12px;
+}
+

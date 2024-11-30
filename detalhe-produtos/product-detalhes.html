@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="product-detalhes.css">
+    <title>Detalhe do produto</title>
+</head>
+<body>
+    <nav>
+        <ul class="lista-nav">
+            <li id="item-0">
+                <a href="../index.html"><img src="../imagens/GM (1).png" alt="Logo" width="80px"></a>
+            </li>
+            <li id="item-1">
+                <a href="../#Catalogo-Primavera" class="nav-link">Nova Coleção</a>
+                <a href="../#Section-Promoções" class="nav-link">Promoções</a>
+                <a href="../catalogo/catalogo.html" class="nav-link">Catálogo</a>
+            </li>
+            <li id="item-2">
+                <a href="../login/login.html"><img src="../imagens/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.webp" width="50px"></a>
+                <a href="../carrinho/sacola.html"><img src="../imagens/sacola.png" width="60px"><div class="contador">0</div></a>
+            </li>
+        </ul>
+    </nav>  
+    <main>
+        <section class="Seção-carrinho" id="Seção-carrinho">
+            <button class="back-button" onclick="window.history.back()">Voltar</button>
+            <div class="container">
+                <div class="product-image">
+                    <img id="product-image" src="" alt="Imagem do Produto">
+                </div>
+                <div class="product-details">
+                    <h2 id="product-title">Carregando...</h2>
+                    <p class="weight">Peso líquido: 5g</p>
+                    <p class="brand">Modelo/Marca: <a href="#">Gloss Magia</a></p>
+                    <h3 id="product-price"></h3>
+                    <p id="product-installments"></p>
+                    <div class="quantity">
+                        <button class="minus">-</button>
+                        <input type="text" id="quantity" value="1">
+                        <button class="plus">+</button>
+                    </div>
+                    <button class="buy-button">Comprar</button>
+                    <button class="shipping-button" onclick="AdicionarSacola()">Adicionar ao Carrinho</button>
+                    <div class="pagamento">
+                        <div class="payment-methods">
+                            <ul>
+                                <li>
+                                    <img src="../imagens/pix.svg" alt="Pix">
+                                    <p>R$ 39,99 à vista</p>
+                                </li>
+                                <li>
+                                    <img src="../imagens/th.jpeg" alt="Boleto">
+                                    <p>R$ 39,99 à vista</p>
+                                </li>
+                            </ul>
+                            <div class="imgs-pags">
+                                <img src="../imagens/ico_visa.gif" alt="Visa">
+                                <img src="../imagens/ico_mastercard.gif" alt="Mastercard">
+                                <img src="../imagens/ico_elo.gif" alt="elo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="rodape">
+        <div class="rodape-marketing">
+            <img src="../imagens/GM (1).png" alt="Logo" width="150px">
+            <ul class="rodape-social">
+                <li><img src="../imagens/idFfy6J0Cd.svg" alt="Instagram" width="30px"></li>
+                <li><img src="../imagens/idpayc5Hv0.svg" alt="TikTok" width="25px"></li>
+                <li><img src="../imagens/facebook.png" alt="Facebook" width="30px"></li>
+            </ul>
+        </div>
+        
+        <div class="rodape-loc">
+            <img src="../imagens/location.png" alt="Localização" width="60px">
+            <h4>Localização</h4>
+        </div>
+        
+        <div class="rodape-email">
+            <img src="../imagens/email.png" alt="Email" width="80px">
+            <h6 id="text-email"><strong>Fale conosco</strong> <br>GlossMagia@gmail.com</h6>
+        </div>
+        
+        <div class="rodape-pag">
+            <h3>Páginas</h3>
+            <hr width="100px">
+            <ul class="rodape-paginas">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../#Section-Promoções">Promoções</a></li>
+                <li><a href="../catalogo/catalogo.html">Catálogo</a></li>
+            </ul>
+        </div>
+        
+        <div class="rodape-direitos">
+            <p>Todos os direitos reservados ©</p>
+            <img src="../imagens/logo Rk.png" width="300px">
+        </div>
+    </footer>
+    <script src="product-detalhes.js"></script>
+    <script src="carrinho.js"></script>
+</body>
+</html>
