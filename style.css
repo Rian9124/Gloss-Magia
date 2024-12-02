@@ -158,7 +158,7 @@ nav {
 
 #titulo1 {
     position: absolute;
-    margin-left: 100px;
+    margin-left: 60px;
     font-size: 50px;
     font-weight: bold;
     margin-top: 30px;
@@ -169,12 +169,13 @@ nav {
     position: absolute;
     font-size: 24px;
     color: #FFC107;
-    margin-left: 550px;
+    margin-left: 490px;
     margin-top: 90px;
 
 }
 #image2{
-    margin-top: 60px;
+    width: 450px;
+    margin-top: 90px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 .text-button{
@@ -273,6 +274,7 @@ nav {
     margin-left: 70px;
 }
 .image3{
+    width: 600px;
     margin-top: 0px;
 }
 #img1 {
