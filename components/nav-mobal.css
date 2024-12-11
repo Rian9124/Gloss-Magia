@@ -1,0 +1,72 @@
+/* Navbar mobile */
+.nav-mobal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2c3e50; /* Cor de fundo personalizada */
+    color: white;
+    position: fixed; /* Fixa no topo */
+    width: 100%;
+    z-index: 10;
+}
+
+/* Logo */
+.nav-mobal .logo img {
+    width: 50px;
+}
+
+/* Links de navegação */
+.nav-mobal .nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-mobal .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-mobal .nav-links a:hover {
+    color: #ff4081;
+}
+
+/* Botão do menu responsivo */
+.nav-mobal .menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Menu dropdown para telas menores */
+.nav-mobal .dropdown {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    background-color: #34495e;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav-mobal .dropdown a {
+    padding: 10px 15px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-mobal .nav-links {
+        display: none;
+    }
+
+    .nav-mobal .menu-toggle {
+        display: block;
+    }
+
+    .nav-mobal .dropdown {
+        display: flex;
+    }
+}+++

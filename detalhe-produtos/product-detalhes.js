@@ -185,3 +185,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Atualizar o contador ao carregar a página
     updateCounter();
 });
+
+
+function toggleMenu() {
+    const dropdown = document.querySelector('.dropdown');
+    dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+}

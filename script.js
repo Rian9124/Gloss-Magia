@@ -40,23 +40,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// carrosel promoções
 const carousel = document.querySelector('.carousel');
 const prevButton = document.querySelector('.carousel-button.prev');
 const nextButton = document.querySelector('.carousel-button.next');
 
 let offset = 0;
-const cardWidth = 270; // largura do card + margens
+const cardWidth = 130; // largura do card + margens
+const maxOffset = -(cardWidth * (carousel.children.length - 1)); // Limite máximo (todos os cards)
 
 prevButton.addEventListener('click', () => {
-    offset += cardWidth;
+    offset = Math.min(500, offset + cardWidth); // Limita o deslocamento mínimo a 0
     carousel.style.transform = `translateX(${offset}px)`;
 });
 
 nextButton.addEventListener('click', () => {
-    offset -= cardWidth;
+    offset = Math.max(maxOffset, offset - cardWidth); // Limita o deslocamento máximo ao limite máximo
     carousel.style.transform = `translateX(${offset}px)`;
 });
+
 
 
 document.querySelectorAll('.comprar-button').forEach(button => {

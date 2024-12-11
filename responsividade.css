@@ -3,7 +3,7 @@
         display: none;
     }
 }
-@media (min-width:200px) and (max-width:599px){
+@media (min-width:200px) and (max-width:499px){
     .nav-desk{
         display: none;
     }
@@ -25,15 +25,18 @@
         display: none;
     }
     #titulo1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: relative;
-        font-size: 50px;
+        font-size: 1.4rem;
         font-weight: bold;
         color: #ffffff;
-        font-size: 1.7rem;
+        margin-left: 0;
     }
     #Nova-Coleção{
         position: relative;
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         color: #FFC107;
         margin-left: 0;
         margin-top: 10px;
@@ -52,29 +55,37 @@
     #text-p {
         font-size: 18px;
         color: #e2e2e2;
-        text-align: left;
+        text-align: center;
     }
     #image3{
         max-width: 100%;
         margin-top: 0px;
     }
+    .Catalogo-Primavera{
+        background-image:  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(imagens/fundo-detalhes.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
     .agrup-1, .agrup-2 {
         display: flex;
         justify-content: center;
-        flex-direction:row ;
-        margin-right: 0px;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px; /* Ajuste o espaçamento entre os cards */
+        margin-right: 0;
         margin-left: 0;
     }
     .card1 { 
-        width: 30%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        width: 80%;
         background-color: #fff;
         border-radius: 15px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         padding: 20px;
-        margin: 10px;
+        margin: 10px 0;
+    }
+    .carousel-button.next, .carousel-button.prev {
+        display:initial;
     }
 }
