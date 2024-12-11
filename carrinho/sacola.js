@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Função para atualizar o contador de itens no carrinho
     function updateCounter() {
-        const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0); // Atualiza a contagem com a quantidade
         contador.textContent = totalItems; // Atualiza o valor no contador
     }
 
@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // Ocultar os elementos da seção do carrinho
         sectionCarrinho.innerHTML = `
             <div class="empty-cart-message" style="text-align: center; margin-top: 50px;">
-                <h1 style="font-size: 3rem; color: #555;">Sua sacola está vazio</h1>
-                <img src="../imagens/sacola2.png" width="300px" style =  "background-color:black">
+                <h1 style="font-size: 3rem; color: #555;">Sua sacola está vazia</h1>
+                <img src="../imagens/sacola2.png" width="300px" style="background-color:black">
             </div>
         `;
         return; // Não precisa continuar o restante da lógica
@@ -49,11 +49,11 @@ document.addEventListener("DOMContentLoaded", function () {
                         <p class="card-text">${item.price}</p>
                         <div class="quantity">
                             <button class="minus" data-index="${index}">-</button>
-                            <input type="text" class="quantity-input" value="${item.quantity || 1}" readonly>
+                            <input type="text" class="quantity-input" value="${item.quantity}" readonly>
                             <button class="plus" data-index="${index}">+</button>
                         </div>
                         <div>
-                            <input type="checkbox" class="select-item" data-price="${item.price}" checked> Selecionar
+                            <input type="checkbox" class="select-item" data-index="${index}" checked> Selecionar
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
         cartItemsContainer.appendChild(card);
 
         // Calcular o total inicial
-        const price = parseFloat(item.price.replace("R$", "").replace(",", ".").trim()) * (item.quantity || 1);
+        const price = parseFloat(item.price.replace("R$", "").replace(",", ".").trim()) * item.quantity;
         total += isNaN(price) ? 0 : price;
     });
 
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
     cartItemsContainer.addEventListener("change", (event) => {
         const checkbox = event.target;
         if (checkbox.classList.contains("select-item")) {
-            const price = parseFloat(checkbox.dataset.price.replace("R$", "").replace(",", ".").trim());
+            const price = parseFloat(checkbox.dataset.price.replace("R$", "").replace(",", ".").trim()) * checkbox.checked;
             total += checkbox.checked ? price : -price;
             updateTotal();
         }
@@ -101,9 +101,14 @@ document.addEventListener("DOMContentLoaded", function () {
             // Atualizar o localStorage
             localStorage.setItem("cart", JSON.stringify(cart));
 
-            // Recalcular total, atualizar contador e recarregar a página
+            // Recalcular total e atualizar o contador sem recarregar a página
+            total = 0; // Resetar o total e recalcule-o com as quantidades atualizadas
+            cart.forEach(item => {
+                const price = parseFloat(item.price.replace("R$", "").replace(",", ".").trim()) * item.quantity;
+                total += price;
+            });
+            updateTotal();
             updateCounter();
-            location.reload();
         }
     });
 });

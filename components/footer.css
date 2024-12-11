@@ -1,0 +1,66 @@
+/* rodapé */
+
+.rodape {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: Arial, sans-serif;
+}
+
+.rodape-loc {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.rodape-coluna h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.rodape-email{
+    display: flex;
+    align-items: center;
+}
+#text-email{
+    text-align: center;
+}
+
+.rodape-social {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.rodape-paginas {
+    list-style: none;
+    padding: 0;
+}
+
+.rodape-paginas li {
+    margin: 5px 0;
+}
+
+.rodape-paginas a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.rodape-paginas a:hover {
+    text-decoration: underline;
+}
+
+.rodape-direitos {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #fff;
+    padding-top: 10px;
+    font-size: 12px;
+}
+

@@ -42,33 +42,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // carrosel promoções
 const carousel = document.querySelector('.carousel');
-const cards = document.querySelectorAll('.card');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
+const prevButton = document.querySelector('.carousel-button.prev');
+const nextButton = document.querySelector('.carousel-button.next');
 
-let index = 0;
-const totalCards = cards.length;
+let offset = 0;
+const cardWidth = 270; // largura do card + margens
 
-// Ajuste para lidar com o tamanho do carrossel
-function updateCarousel() {
-    const cardWidth = cards[0].offsetWidth + 20; // inclui margem lateral
-    carousel.style.transform = `translateX(-${index * cardWidth}px)`;
-}
-
-nextBtn.addEventListener('click', () => {
-    index++;
-    if (index >= totalCards) {
-        index = 0; // Retorna ao primeiro card
-    }
-    updateCarousel();
+prevButton.addEventListener('click', () => {
+    offset += cardWidth;
+    carousel.style.transform = `translateX(${offset}px)`;
 });
 
-prevBtn.addEventListener('click', () => {
-    index--;
-    if (index < 0) {
-        index = totalCards - 1; // Vai para o último card
-    }
-    updateCarousel();
+nextButton.addEventListener('click', () => {
+    offset -= cardWidth;
+    carousel.style.transform = `translateX(${offset}px)`;
 });
 
 

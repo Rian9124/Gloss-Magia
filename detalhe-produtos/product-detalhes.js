@@ -1,78 +1,107 @@
-        // Objeto com detalhes dos produtos
-        const products = {
-            'batom-primavera': {
-                title: 'Batom Frescor da Primavera',
-                image: '../imagens/15596984-a5d2-4d4b-89b0-3787c8cc40a6-revlon-ultra-hd-romance-batom-liquido-matte-59ml.webp',
-                price: 'R$120,00',
-                installments:'ou 1x de R$ 39,99 sem juros ou em até 6x de R$ 7,20 no cartão'
-            },
-            'gloss-floral': {
-                title: 'Gloss Floral Brilhante',
-                image: '../imagens/1xg.png',
-                price: 'R$115,00'
-            },
-            'gloss-chocolate': {
-                title: 'Gloss Toque de Chocolate',
-                image: '../imagens/874-8746209_fenty-beauty-lip-gloss.png',
-                price: 'R$110,00'
-            },
-            'iluminador-manha': {
-                title: 'Iluminador Brilho da Manhã',
-                image: '../imagens/iluminador_glow_and_go_golden_0.png',
-                price: 'R$135,00'
-            },
-            'base-matte': {
-                title: 'Base Corretivo Matte',
-                image: '../imagens/dfb1321f-6b18-4425-a4c6-04973ca68535-mari-maria-makeup-velvet-skin-cacau-base-liquida-25g.webp',
-                price: 'R$199,90'
-            },
-            'paleta-maquiagem': {
-                title: 'Paleta de Maquiagem',
-                image: '../imagens/5d91ddeb-4983-4ace-9161-6ab8ece780ee-88122-vult-rica-de-marre-paleta-de-maquiagem-12g.webp',
-                price: 'R$89,90'
-            },
-            'hidratante-creme': {
-                title: 'Hidratante Creme Nutritivo',
-                image: '../imagens/e89f6e8f-1972-49bf-ba67-598122306979-102585-vult-care-creme-reparador-facial-100g.webp',
-                price: 'R$49,90'
-            },
-            'lapis-clarins': {
-                title: 'Lápis Clarins Marrom',
-                image: '../imagens/clarins-crayon-sourcils-02-light-brown-lapis-para-sobrancelha-13g-35585-3714440298571283189.webp',
-                price: 'R$29,90'
-            },
-            'gloss-labial': {
-                title: 'Gloss Labial Nova Coleção',
-                image: '../imagens/maca.png',
-                price: 'R$19,90'
-            }
-        };
+// Objeto com detalhes dos produtos
+const products = {
+    'batom-primavera': {
+        title: 'Batom Frescor da Primavera',
+        image: '../imagens/15596984-a5d2-4d4b-89b0-3787c8cc40a6-revlon-ultra-hd-romance-batom-liquido-matte-59ml.webp',
+        price: 'R$120,00',
+        installments:'ou 1x de R$ 39,99 sem juros ou em até 6x de R$ 7,20 no cartão'
+    },
+    'gloss-floral': {
+        title: 'Gloss Floral Brilhante',
+        image: '../imagens/1xg.png',
+        price: 'R$115,00',
+        installments:'ou 1x de R$ 39,99 sem juros ou em até 6x de R$ 7,20 no cartão'
+    },
+    'gloss-chocolate': {
+        title: 'Gloss Toque de Chocolate',
+        image: '../imagens/874-8746209_fenty-beauty-lip-gloss.png',
+        price: 'R$110,00'
+    },
+    'iluminador-manha': {
+        title: 'Iluminador Brilho da Manhã',
+        image: '../imagens/iluminador_glow_and_go_golden_0.png',
+        price: 'R$135,00'
+    },
+    'base-matte': {
+        title: 'Base Corretivo Matte',
+        image: '../imagens/dfb1321f-6b18-4425-a4c6-04973ca68535-mari-maria-makeup-velvet-skin-cacau-base-liquida-25g.webp',
+        price: 'R$199,90'
+    },
+    'paleta-maquiagem': {
+        title: 'Paleta de Maquiagem',
+        image: '../imagens/5d91ddeb-4983-4ace-9161-6ab8ece780ee-88122-vult-rica-de-marre-paleta-de-maquiagem-12g.webp',
+        price: 'R$89,90'
+    },
+    'hidratante-creme': {
+        title: 'Hidratante Creme Nutritivo',
+        image: '../imagens/e89f6e8f-1972-49bf-ba67-598122306979-102585-vult-care-creme-reparador-facial-100g.webp',
+        price: 'R$49,90'
+    },
+    'lapis-clarins': {
+        title: 'Lápis Clarins Marrom',
+        image: '../imagens/clarins-crayon-sourcils-02-light-brown-lapis-para-sobrancelha-13g-35585-3714440298571283189.webp',
+        price: 'R$29,90'
+    },
+    'gloss-labial': {
+        title: 'Gloss Labial Nova Coleção',
+        image: '../imagens/maca.png',
+        price: 'R$19,90'
+    }
+};
 
-        // Função para pegar os parâmetros da URL
-        function getQueryParam(param) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(param);
-        }
+// Função para calcular parcelamento e atualizar o objeto com a mensagem correta
+function parcelamento() {
+    Object.keys(products).forEach(productKey => {
+        const product = products[productKey];
 
-        // Pegar o parâmetro do produto da URL
-        const productKey = getQueryParam('product');
+        // Obter o preço do produto e converter para número
+        const price = parseFloat(product.price.replace('R$', '').replace(',', '.'));
 
-        // Se houver um produto selecionado, atualize os detalhes
-        if (productKey && products[productKey]) {
-            updateProductDetails(productKey);
-        } else {
-            console.error('Produto não encontrado ou nenhum produto foi selecionado.');
-        }
+        // Cálculos para parcelamento
+        const sixInstallmentsValue = (price / 6).toFixed(2); // Parcelado em 6 vezes sem juros
 
-        // Função para atualizar a página com os detalhes do produto
-        function updateProductDetails(productKey) {
-            const product = products[productKey];
+        // Para parcelamentos acima de 6 vezes (com 2.5% de taxa por parcela)
+        const totalWithFee = price * 1.025; // Aplicando a taxa de 2.5%
+        const nineInstallmentsValue = (totalWithFee / 9).toFixed(2); // Parcelado em 9 vezes
 
-            document.getElementById('product-title').textContent = product.title;
-            document.getElementById('product-image').src = product.image;
-            document.getElementById('product-price').textContent = product.price;
-            document.getElementById('product-installments').textContent = product.installments;
-        }
+        // Criar a mensagem de parcelamento
+        const installmentMessage = ` 
+        ou 6x de R$ ${sixInstallmentsValue.replace('.', ',')} sem juros, 
+        ou 9x de R$ ${nineInstallmentsValue.replace('.', ',')} reais`;
+
+        // Atualizar o objeto com a nova mensagem
+        product.installments = installmentMessage;
+    });
+}
+
+// Executar o cálculo de parcelamento para atualizar os produtos
+parcelamento();
+
+// Atualizar detalhes do produto na página se existir o parâmetro na URL
+function updateProductDetails(productKey) {
+    const product = products[productKey];
+
+    document.getElementById('product-title').textContent = product.title;
+    document.getElementById('product-image').src = product.image;
+    document.querySelectorAll('.product-price').forEach(element => {
+        element.textContent = product.price;
+    });    
+    document.getElementById('product-installments').textContent = product.installments;
+}
+
+// Pegar o parâmetro do produto da URL
+function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+}
+
+// Atualizar os detalhes do produto selecionado, se existir
+const productKey = getQueryParam('product');
+if (productKey && products[productKey]) {
+    updateProductDetails(productKey);
+} else {
+    console.error('Produto não encontrado ou nenhum produto foi selecionado.');
+}
 
 // Lógica para aumentar e diminuir quantidade
 const quantityInput = document.getElementById('quantity');
@@ -98,10 +127,16 @@ plusButton.addEventListener('click', () => {
 
 
 
+
+
 function AdicionarSacola() {
+    function parsePrice(price) {
+        return parseFloat(price.replace('R$', '').replace(',', '.').trim());
+    }
+
     const productImage = document.getElementById("product-image").src;
     const productTitle = document.getElementById("product-title").innerText;
-    const productPrice = document.getElementById("product-price").innerText;
+    const productPrice = parsePrice(document.querySelector(".product-price").innerText);
 
     // Objeto representando o produto
     const product = {
@@ -130,6 +165,7 @@ function AdicionarSacola() {
 
     alert("Produto adicionado à sacola!");
 }
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const contador = document.querySelector(".contador"); // Seleciona o elemento do contador

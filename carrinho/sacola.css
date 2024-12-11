@@ -5,64 +5,6 @@
     box-sizing: border-box; /* Ajuda a controlar o tamanho dos elementos */
 }
 
-/* nav */
-nav {
-    background-color: #070909;
-    font-family: 'Playfair Display', serif;
-}
-nav a {
-    text-decoration: none;
-    color: inherit;
-}
-#item-2{
-    display: flex;
-    align-items: center;
-}
-.lista-nav {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    justify-content: space-between;
-    font-size: 20px;
-    font-family: 'SUSE', sans-serif;
-}
-
-.lista-nav li {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    margin-right: 20px;
-    color: #ffffff;
-}
-.nav-link {
-    text-decoration: none;
-    font-size: 18px;
-    margin: 0px 20px;
-    position: relative;
-    transition: color 0.3s;
-}
-
-.nav-link::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #667471;
-    transition: width 0.3s;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-}
-
-.nav-link:hover::after {
-    width: 100%;
-}
-
-
-
-
 #total-price {
     font-size: 18px;
     font-weight: bold;
@@ -90,7 +32,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin: 10vh 0;
 }
 /* Cards de produtos */
 /* Container principal */
@@ -217,6 +159,7 @@ main{
 }
 
 .contador{
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -227,72 +170,4 @@ main{
     background-color: #c2185b;
     margin-top: -60px;
     margin-left: 30px;
-}
-
-
-/* footer */
-
-.rodape {
-    margin-top: 18%;
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    font-family: Arial, sans-serif;
-}
-
-.rodape-loc {
-    display: flex;
-    align-items: center;
-    margin: 10px;
-}
-
-.rodape-coluna h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-.rodape-email{
-    display: flex;
-    align-items: center;
-}
-#text-email{
-    text-align: center;
-}
-
-.rodape-social {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.rodape-paginas {
-    list-style: none;
-    padding: 0;
-}
-
-.rodape-paginas li {
-    margin: 5px 0;
-}
-
-.rodape-paginas a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.rodape-paginas a:hover {
-    text-decoration: underline;
-}
-
-.rodape-direitos {
-    width: 100%;
-    text-align: center;
-    margin-top: 20px;
-    border-top: 1px solid #fff;
-    padding-top: 10px;
-    font-size: 12px;
 }
