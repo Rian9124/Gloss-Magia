@@ -174,19 +174,63 @@ ul li{
 .back-button:hover {
     background-color: #c2185b;
 }
-.offcanvas-title{
+/* Navbar principal */
+.nav-mobal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #070909;
+    color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Logo */
+.nav-mobal .logo img {
+    width: 50px;
+}
+.logo{
     display: flex;
     align-items: center;
-    font-size: 1.7rem;
 }
-.pai{
-    display: flex;
-    margin: 0 10px;
+
+.nav-mobal .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
-.div-item-2{
-    margin-left: 30vw;
+
+.nav-mobal .nav-links a:hover {
+    color: #ff4081;
 }
-.nav-link{
-    list-style: none;
-    color: #000;
+
+/* Botão do menu responsivo */
+.nav-mobal .menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Menu dropdown para telas menores */
+.nav-mobal .dropdown {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100vh;
+    background-color: #070909;
+    padding: 10px 40px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+}
+
+.nav-mobal .dropdown a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: white;
 }

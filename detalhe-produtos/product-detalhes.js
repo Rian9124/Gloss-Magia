@@ -191,3 +191,7 @@ function toggleMenu() {
     const dropdown = document.querySelector('.dropdown');
     dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
 }
+function fechar(){
+    const dropdown = document.querySelector('.dropdown');
+    dropdown.style.display=dropdown.style.display=== 'flex' ? 'none' : 'flex';
+}

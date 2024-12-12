@@ -1,5 +1,5 @@
 @media (min-width:800px) and (max-width:1999px){
-    .botstrap{
+    .nav-mobal{
         display: none;
     }
 }
@@ -37,6 +37,17 @@
         background-color: #e8e8e8;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         padding: 10px;
+    }
+    .nav-mobal .nav-links {
+        display: none;
+    }
+
+    .nav-mobal .menu-toggle {
+        display: block;
+    }
+
+    .nav-mobal .dropdown {
+        display: flex;
     }
 
 }
