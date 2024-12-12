@@ -1,5 +1,5 @@
 @media (min-width:800px) and (max-width:1999px){
-    .nav-mobal{
+    .botstrap{
         display: none;
     }
 }
@@ -7,17 +7,7 @@
     .nav-desk{
         display: none;
     }
-    .nav-mobal .nav-links {
-        display: none;
-    }
 
-    .nav-mobal .menu-toggle {
-        display: block;
-    }
-
-    .nav-mobal .dropdown {
-        display: flex;
-    }
     /* Estilo do botão de voltar */
     .back-button {
         margin-left: 72%;

@@ -1,5 +1,5 @@
 @media (min-width:800px) and (max-width:1999px){
-    #navbar{
+    .botstrap{
         display: none;
     }
 }

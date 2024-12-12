@@ -38,42 +38,38 @@
             </li>
         </ul>
     </nav>   
-    <nav class="navbar navbar-dark bg-dark" id="navbar">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="imagens/GM (1).png" width="60px"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-          </button>
-          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <nav class="botstrap">
+        <div class="pai">
+            <div>
+                <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">☰</a>
+                    <img src="../imagens/GM (1).png" width="70px">
             </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
+                <div class="div-item-2">
+                    <li id="item-2">
+                        <a href="login/login.html"><img src="../imagens/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.webp" width="50px"></a>
+                        <a href="../carrinho/sacola.html"><img src="../imagens/sacola.png" width="60px"><div class="contador">0</div></a>
                     </li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
+                </div>
+        </div>
+            <div class="offcanvas offcanvas-start  w-50 p-3" style="background-color: #dfdfdf; color: rgb(0, 0, 0);" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">GlossMagia</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Nova Coleção</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Promoções</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Catálogo</a>
                 </li>
               </ul>
             </div>
-          </div>
-        </div>
-      </nav>
+            </div>
+    </nav>
     <main>
         <section class="Nova-Coleção">
             <div class="seção-coleção">

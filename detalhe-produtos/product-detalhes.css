@@ -174,3 +174,19 @@ ul li{
 .back-button:hover {
     background-color: #c2185b;
 }
+.offcanvas-title{
+    display: flex;
+    align-items: center;
+    font-size: 1.7rem;
+}
+.pai{
+    display: flex;
+    margin: 0 10px;
+}
+.div-item-2{
+    margin-left: 30vw;
+}
+.nav-link{
+    list-style: none;
+    color: #000;
+}
