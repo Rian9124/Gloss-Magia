@@ -38,38 +38,28 @@
             </li>
         </ul>
     </nav>   
-    <nav class="botstrap">
-        <div class="pai">
-            <div>
-                <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">☰</a>
-                    <img src="../imagens/GM (1).png" width="70px">
-            </div>
-                <div class="div-item-2">
-                    <li id="item-2">
-                        <a href="login/login.html"><img src="../imagens/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.webp" width="50px"></a>
-                        <a href="../carrinho/sacola.html"><img src="../imagens/sacola.png" width="60px"><div class="contador">0</div></a>
-                    </li>
-                </div>
+    <nav class="nav-mobal">
+        <div class="logo-mobal">
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <img src="../imagens/GM (1).png" alt="Logo" width="60px">
         </div>
-            <div class="offcanvas offcanvas-start  w-50 p-3" style="background-color: #dfdfdf; color: rgb(0, 0, 0);" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasExampleLabel">GlossMagia</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+        <div class="dropdown" style="display: none;">
+            <div class="nav-dropdown">
+                <h3 id="titulo-dropdown">GlossMagia</h3>
+                <span id="fechar" onclick="fechar()"><h3 id="fechar-dropdown">✖</h3></span>
             </div>
-            <ul class="nav">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Nova Coleção</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Promoções</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Catálogo</a>
-                </li>
-              </ul>
+            <div class="lista">
+                <a href="../index.html" class="lista-item">Nova Coleção</a>
+                <a href="../#Section-Promoções" class="lista-item">Promoções</a>
+                <a href="../catalogo/catalogo.html" class="lista-item">Catálogo</a>
             </div>
-            </div>
-    </nav>
+        </div>
+        <li id="item-2">
+            <a href="../login/login.html"><img src="../imagens/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.webp" width="50px"></a>
+            <a href="../carrinho/sacola.html"><img src="../imagens/sacola.png" width="60px"><div class="contador">0</div></a>
+        </li>
+    </nav> 
     <main>
         <section class="Nova-Coleção">
             <div class="seção-coleção">

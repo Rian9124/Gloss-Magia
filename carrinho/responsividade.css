@@ -1,0 +1,28 @@
+@media (min-width:800px) and (max-width:1999px){
+    .nav-mobal{
+        display: none;
+    }
+}
+@media (min-width:200px) and (max-width:499px){
+    .nav-desk{
+        display: none;
+    }
+    .nav-mobal{
+        background-color: #000;
+    }
+    .nav-mobal .nav-links {
+        display: none;
+    }
+
+    .nav-mobal .menu-toggle {
+        display: block;
+    }
+
+    .nav-mobal .dropdown {
+        display: flex;
+    }
+        /* Estilização dos cards */
+    .card {
+        width: 70vw;
+    }
+}

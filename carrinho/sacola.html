@@ -6,27 +6,50 @@
     <link rel="stylesheet" href="sacola.css">
     <link rel="stylesheet" href="../components/nav.css">
     <link rel="stylesheet" href="../components/footer.css">
+    <link rel="stylesheet" href="responsividade.css">
     <link rel="shortcut icon" href="../imagens/GM (1).png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Carrinho</title>
 </head>
 <body>
-    <nav>
+    <nav class="nav-desk">
         <ul class="lista-nav">
             <li id="item-0">
-                <a href="../index.html"><img src="../imagens/GM (1).png" alt="Logo" width="80px"></a>
+                <a href="index.html"><img src="../imagens/GM (1).png" alt="Logo" width="80px"></a>
             </li>
             <li id="item-1">
-                <a href="../#Catalogo-Primavera" class="nav-link">Nova Coleção</a>
+                <a href="../index.html" class="nav-link">Nova Coleção</a>
                 <a href="../#Section-Promoções" class="nav-link">Promoções</a>
-                <a href="#" class="nav-link">Catálogo</a>
+                <a href="../catalogo/catalogo.html" class="nav-link">Catálogo</a>
             </li>
             <li id="item-2">
-                <a href="../login/login.html"><img src="../imagens/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.webp" width="50px"></a>
+                <a href="login/login.html"><img src="../imagens/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.webp" width="50px"></a>
                 <a href="../carrinho/sacola.html"><img src="../imagens/sacola.png" width="60px"><div class="contador">0</div></a>
             </li>
         </ul>
-    </nav>  
+    </nav>   
+    <nav class="nav-mobal">
+        <div class="logo">
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <img src="../imagens/GM (1).png" alt="Logo" width="50px">
+        </div>
+
+        <div class="dropdown" style="display: none;">
+            <div class="nav-dropdown">
+                <h3 id="titulo-dropdown">GlossMagia</h3>
+                <span id="fechar" onclick="fechar()"><h3 id="fechar-dropdown">✖</h3></span>
+            </div>
+            <div class="lista">
+                <a href="../index.html" class="lista-item">Nova Coleção</a>
+                <a href="../#Section-Promoções" class="lista-item">Promoções</a>
+                <a href="../catalogo/catalogo.html" class="lista-item">Catálogo</a>
+            </div>
+        </div>
+        <li id="item-2">
+            <a href="../login/login.html"><img src="../imagens/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.webp" width="50px"></a>
+            <a href="../carrinho/sacola.html"><img src="../imagens/sacola.png" width="60px"><div class="contador">0</div></a>
+        </li>
+    </nav> 
     <main>
         <section class="Seção-carrinho" id="Seção-carrinho">
             <button class="back-button" onclick="window.history.back()">Voltar</button>
@@ -84,6 +107,7 @@
         </div>
     </footer>
     <script src="../detalhe-produtos/product-detalhes.js"></script>
+    <script src="carrinho-products.js"></script>
     <script src="../carrinho/sacola.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

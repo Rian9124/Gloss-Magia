@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="catalago.css">
+    <link rel="stylesheet" href="responsividade.css">
+    <link rel="stylesheet" href="../components/nav.css">
+    <link rel="stylesheet" href="../components/footer.css">
+    <link rel="shortcut icon" href="../imagens/GM (1).png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálago</title>
+</head>
+<body>
+    <nav class="nav-desk">
+        <ul class="lista-nav">
+            <li id="item-0">
+                <a href="index.html"><img src="../../imagens/GM (1).png" alt="Logo" width="80px"></a>
+            </li>
+            <li id="item-1">
+                <a href="#Catalogo-Primavera" class="nav-link">Nova Coleção</a>
+                <a href="#Section-Promoções" class="nav-link">Promoções</a>
+                <a href="../catalogo/catalogo.html" class="nav-link">Catálogo</a>
+            </li>
+            <li id="item-2">
+                <a href="login/login.html"><img src="../../imagens/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.webp" width="50px"></a>
+                <a href="../carrinho/sacola.html"><img src="../../imagens/sacola.png" width="60px"><div class="contador">0</div></a>
+            </li>
+        </ul>
+    </nav>
+    <nav class="nav-mobal">
+        <div class="logo-mobal">
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <img src="../imagens/GM (1).png" alt="Logo" width="60px">
+        </div>
+
+        <div class="dropdown" style="display: none;">
+            <div class="nav-dropdown">
+                <h3 id="titulo-dropdown">GlossMagia</h3>
+                <span id="fechar" onclick="fechar()"><h3 id="fechar-dropdown">✖</h3></span>
+            </div>
+            <div class="lista">
+                <a href="../index.html" class="lista-item">Nova Coleção</a>
+                <a href="../#Section-Promoções" class="lista-item">Promoções</a>
+                <a href="../catalogo/catalogo.html" class="lista-item">Catálogo</a>
+            </div>
+        </div>
+        <li id="item-2">
+            <a href="../login/login.html"><img src="../imagens/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.webp" width="50px"></a>
+            <a href="../carrinho/sacola.html"><img src="../imagens/sacola.png" width="60px"><div class="contador">0</div></a>
+        </li>
+    </nav>   
+    <main>
+        <div class="agrup">
+            <div class="agrup-1">
+                <div class="card1">
+                    <img src="../imagens/15596984-a5d2-4d4b-89b0-3787c8cc40a6-revlon-ultra-hd-romance-batom-liquido-matte-59ml.webp" width="200px">
+                    <h3 class="descriton">Batom Frescor da Primavera</h3>
+                    <h2 id="preco">R$120,00</h2>
+                    <button id="comprar"><a href="detalhe-produtos/product-detalhes.html?product=batom-primavera" class="comprar-link">Comprar Agora</a></button>
+                </div>
+                <div class="card1">
+                    <img src="../imagens/1xg.png" width="200px">
+                    <h3 class="descriton">Gloss Floral Brilhante</h3>
+                    <h2 id="preco">R$115,00</h2>
+                    <button id="comprar" class="comprar-button" data-product="gloss-floral-brilhante"><a href="detalhe-produtos/product-detalhes.html?product=gloss-floral" class="comprar-link">Comprar Agora</a></button>
+                </div>
+            </div>
+            <div class="agrup-2">
+                <div class="card1">
+                    <img src="../imagens/874-8746209_fenty-beauty-lip-gloss.png" width="150px">
+                    <h3 class="descriton">Gloss Toque de Chocolate</h3>
+                    <h2 id="preco">R$110,00</h2>
+                    <button id="comprar" class="comprar-button" data-product="gloss-floral-brilhante"><a href="detalhe-produtos/product-detalhes.html?product=gloss-chocolate" class="comprar-link">Comprar Agora</a></button>
+                </div>
+                <div class="card1">
+                    <img src="../imagens/iluminador_glow_and_go_golden_0.png" width="250px">
+                    <h3 class="descriton">Iluminador Brilho da Manhã</h3>
+                    <h2 id="preco">R$135,00</h2>
+                    <button id="comprar" class="comprar-button" data-product="gloss-floral-brilhante"><a href="detalhe-produtos/product-detalhes.html?product=iluminador-manha" class="comprar-link">Comprar Agora</a></button>
+                </div>
+            </div>
+    </main>
+    <footer class="rodape">
+        <div class="rodape-marketing">
+            <img src="../../imagens/GM (1).png" alt="Logo" width="150px">
+            <ul class="rodape-social">
+                <li><img src="../../imagens/idFfy6J0Cd.svg" alt="Instagram" width="30px"></li>
+                <li><img src="../../imagens/idpayc5Hv0.svg" alt="TikTok" width="25px"></li>
+                <li><img src="../../imagens/facebook.png" alt="Facebook" width="30px"></li>
+            </ul>
+        </div>
+        
+        <div class="rodape-loc">
+            <img src="../../imagens/location.png" alt="Localização" width="60px">
+            <h4>Localização</h4>
+        </div>
+        
+        <div class="rodape-email">
+            <img src="../../imagens/email.png" alt="Email" width="80px">
+            <h6 id="text-email"><strong>Fale conosco</strong> <br>GlossMagia@gmail.com</h6>
+        </div>
+        
+        <div class="rodape-pag">
+            <h3>Páginas</h3>
+            <hr width="100px">
+            <ul class="rodape-paginas">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../#Section-Promoções">Promoções</a></li>
+                <li><a href="../catalogo/catalogo.html">Catálogo</a></li>
+            </ul>
+        </div>
+        
+        <div class="rodape-direitos">
+            <p>Todos os direitos reservados ©</p>
+            <img src="../../imagens/logo Rk.png" width="300px">
+        </div>
+    </footer>
+    <script src="../detalhe-produtos/product-detalhes.js"></script>
+    <script src="../carrinho/carrinho-products.js"></script>
+    <script src="../login/script.js"></script>
+</body>
+</html>

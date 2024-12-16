@@ -129,6 +129,7 @@ plusButton.addEventListener('click', () => {
 
 
 
+// Função para adicionar produto ao carrinho
 function AdicionarSacola() {
     function parsePrice(price) {
         return parseFloat(price.replace('R$', '').replace(',', '.').trim());
@@ -163,11 +164,12 @@ function AdicionarSacola() {
     // Salvar o carrinho atualizado no localStorage
     localStorage.setItem("cart", JSON.stringify(cart));
 
-    alert("Produto adicionado à sacola!");
+    // Atualizar o contador de itens no carrinho (dinamicamente)
+    updateCounter();
 }
 
-
-document.addEventListener("DOMContentLoaded", function () {
+// Função para atualizar o contador de itens no carrinho
+function updateCounter() {
     const contador = document.querySelector(".contador"); // Seleciona o elemento do contador
 
     if (!contador) {
@@ -175,23 +177,55 @@ document.addEventListener("DOMContentLoaded", function () {
         return; // Evita erros se o contador não existir
     }
 
-    // Função para atualizar o contador de itens no carrinho
-    function updateCounter() {
-        const cart = JSON.parse(localStorage.getItem("cart")) || []; // Obtém o carrinho do localStorage
-        const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 1), 0); // Soma as quantidades
-        contador.textContent = totalItems; // Atualiza o contador com o número total de itens
-    }
+    // Obter o carrinho do localStorage
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    
+    // Calcular o total de itens no carrinho
+    const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 1), 0); // Soma as quantidades
 
-    // Atualizar o contador ao carregar a página
-    updateCounter();
+    // Atualiza o contador na interface
+    contador.textContent = totalItems;
+}
+
+// Ao carregar a página, atualize o contador de itens
+document.addEventListener("DOMContentLoaded", function() {
+    updateCounter(); // Atualiza o contador de itens no carrinho com base no localStorage
 });
+
+// Adicionar evento de clique ao botão de adicionar ao carrinho
+document.querySelector(".btn-adicionar-carrinho").addEventListener("click", function() {
+    AdicionarSacola();
+});
+
 
 
 function toggleMenu() {
     const dropdown = document.querySelector('.dropdown');
-    dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+
+    if (dropdown.classList.contains('active')) {
+        // Animação de saída
+        dropdown.classList.remove('active'); // Remove classe para animação de saída
+        setTimeout(() => {
+            dropdown.style.display = 'none'; // Oculta o menu após a transição
+        }, 300); // Tempo correspondente ao `transition` do CSS
+    } else {
+        // Animação de entrada
+        dropdown.style.display = 'flex'; // Exibe o menu antes da animação
+        setTimeout(() => {
+            dropdown.classList.add('active'); // Adiciona classe para animação de entrada
+        }, 10); // Pequeno atraso para permitir que o navegador registre a transição
+    }
 }
-function fechar(){
+
+function fechar() {
     const dropdown = document.querySelector('.dropdown');
-    dropdown.style.display=dropdown.style.display=== 'flex' ? 'none' : 'flex';
+
+    if (dropdown.classList.contains('active')) {
+        // Animação de saída
+        dropdown.classList.remove('active'); // Remove classe para animação de saída
+        setTimeout(() => {
+            dropdown.style.display = 'none'; // Oculta o menu após a transição
+        }, 500); // Tempo correspondente ao `transition` do CSS
+    }
 }
+

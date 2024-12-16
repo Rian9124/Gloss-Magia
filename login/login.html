@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="responsividade.css">
     <link rel="shortcut icon" href="../imagens/GM (1).png" type="image/x-icon">
     <title>login</title>
 </head>
 <body>
-    <nav>
+    <nav class="nav-desk">
         <ul class="lista-nav">
             <li id="item-0">
                 <a href="../index.html"><img src="../imagens/GM (1).png" alt="Logo" width="80px"></a>
@@ -19,7 +20,29 @@
                 <a href="#" class="nav-link">Catálogo</a>
             </li>
         </ul>
-    </nav>  
+    </nav> 
+    <nav class="nav-mobal">
+        <div class="logo-mobal">
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <img src="../imagens/GM (1).png" alt="Logo" width="60px">
+        </div>
+
+        <div class="dropdown" style="display: none;">
+            <div class="nav-dropdown">
+                <h3 id="titulo-dropdown">GlossMagia</h3>
+                <span id="fechar" onclick="fechar()"><h3 id="fechar-dropdown">✖</h3></span>
+            </div>
+            <div class="lista">
+                <a href="../index.html" class="lista-item">Nova Coleção</a>
+                <a href="../#Section-Promoções" class="lista-item">Promoções</a>
+                <a href="../catalogo/catalogo.html" class="lista-item">Catálogo</a>
+            </div>
+        </div>
+        <li id="item-2">
+            <a href="../login/login.html"><img src="../imagens/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.webp" width="50px"></a>
+            <a href="../carrinho/sacola.html"><img src="../imagens/sacola.png" width="60px"><div class="contador">0</div></a>
+        </li>
+    </nav> 
     <main>
         <section class="principal">
             <div class="login-container">
@@ -49,10 +72,11 @@
                     </form>
                 </div>
                 <div class="login-image">
-                    <img src="../imagens/2d457ab6235f3ac0b54ae84a58aaf4ae.jpg" alt="Model Image">
+                    <img src="../imagens/2d457ab6235f3ac0b54ae84a58aaf4ae.jpg" alt="Model Image" id="imagem-logo">
                 </div>
             </div>
         </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>

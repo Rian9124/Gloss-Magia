@@ -7,90 +7,16 @@
     .nav-desk{
         display: none;
     }
-    .seção-coleção {
-        display: flex;
-        flex-direction: column;
+    .nav-mobal{
+        background-color: #000;
     }
-    #image2{
-        width: 300px;
-        margin-top: 0;
-    }
-    .text-1{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .image{
+    .nav-mobal .nav-links {
         display: none;
     }
-    #titulo1{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        font-size: 1.4rem;
-        font-weight: bold;
-        color: #ffffff;
-        margin-left: 0;
-    }
-    #Nova-Coleção{
-        position: relative;
-        font-size: 1.3rem;
-        color: #FFC107;
-        margin-left: 0;
-        margin-top: 10px;
-    }
-    .text-button{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 0;
-        margin-right: 0;
-        width: 80%;
-        margin-bottom: 20%;
-        margin-left: 20%;
-    }
-    #text-p {
-        font-size: 18px;
-        color: #e2e2e2;
-        text-align: center;
-    }
-    #image3{
-        max-width: 100%;
-        margin-top: 0px;
-    }
-    .Catalogo-Primavera{
-        background-image:  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(imagens/fundo-detalhes.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    .agrup-1, .agrup-2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 20px; /* Ajuste o espaçamento entre os cards */
-        margin-right: 0;
-        margin-left: 0;
-    }
-    .card1 { 
-        width: 80%;
-        background-color: #fff;
-        border-radius: 15px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        padding: 20px;
-        margin: 10px 0;
-    }
-    .carousel-button.next, .carousel-button.prev {
-        display:initial;
-    }
 
-
-
+    .nav-mobal .menu-toggle {
+        display: block;
+    }
     .nav-mobal {
         display: flex;
         justify-content: space-between;
@@ -112,10 +38,6 @@
         display: flex;
         align-items: center;
     }
-    .nav-mobal .menu-toggle {
-        display: block;
-    }
-
     
     .nav-mobal .nav-links a {
         text-decoration: none;
@@ -221,5 +143,13 @@
         color: white;
         margin-top: -65px;
         margin-left: 85px;
+    }
+
+
+    .agrup-1, .agrup-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 0;
     }
 }

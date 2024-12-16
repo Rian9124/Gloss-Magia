@@ -123,7 +123,6 @@ h2 {
     flex-direction: column;
     border: solid 1px #666;
     border-radius: 10px;
-
 }
 ul li{
     display: flex;
@@ -133,11 +132,12 @@ ul li{
     margin-left: 5px;
     
 }
+
 .imgs-pags{
     display: flex;
 }
 .imgs-pags img{
-    padding: 10px;
+    padding: 10px 0 0 0;
 }
 
 .payment-methods img {
@@ -174,7 +174,17 @@ ul li{
 .back-button:hover {
     background-color: #c2185b;
 }
-/* Navbar principal */
+
+
+
+
+
+
+
+
+
+
+
 .nav-mobal {
     display: flex;
     justify-content: space-between;
@@ -211,26 +221,81 @@ ul li{
 /* Botão do menu responsivo */
 .nav-mobal .menu-toggle {
     display: none;
-    font-size: 24px;
+    font-size: 30px;
     cursor: pointer;
 }
 
 /* Menu dropdown para telas menores */
 .nav-mobal .dropdown {
-    display: none;
+    display: flex; /* Deixe flexível para a animação */
     flex-direction: column;
     position: absolute;
-    top: 0;
+    top: 10%;
     left: 0;
-    width: 60%;
-    height: 100vh;
+    width: 60vw;
+    height: 25vh;
     background-color: #070909;
-    padding: 10px 40px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+    padding: 10px 20px 20px 0;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-50%); /* Começa fora da tela */
+    opacity: 0; /* Invisível no início */
+    pointer-events: none; /* Evita cliques enquanto escondido */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Suavidade da transição */
 }
+
+.nav-mobal .dropdown.active {
+    transform: translateY(0); /* Move para a posição visível */
+    opacity: 1; /* Torna visível */
+    pointer-events: all; /* Permite cliques */
+}
+
 
 .nav-mobal .dropdown a {
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 5px 10px;
     color: white;
+}
+.lista{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 10%;
+}
+.lista-item {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0px 10px;
+    position: relative;
+    transition: color 0.3s;
+}
+.lista-item::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #667471;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 10px;
+}
+
+.lista-item:hover::after {
+    width: 60%;
+}
+.nav-dropdown{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#fechar-dropdown{
+    cursor: pointer;
+}
+#fechar-dropdown:hover{
+    border-radius: 3px;
+    background-color: #c2185b;
+}
+#titulo-dropdown{
+ margin-left: 10vw;
 }

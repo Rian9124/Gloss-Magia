@@ -186,3 +186,140 @@ nav {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
 }
+
+
+li {
+    list-style: none; /* Remove o bullet point */
+    margin: 0; /* Garante que não há margens extras */
+    padding: 0; /* Garante que não há padding */
+}
+
+
+.nav-mobal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #070909;
+    color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Logo */
+.nav-mobal .logo-mobal img {
+    width: 50px;
+}
+.logo-mobal{
+    display: flex;
+    align-items: center;
+}
+
+.nav-mobal .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-mobal .nav-links a:hover {
+    color: #ff4081;
+}
+
+/* Botão do menu responsivo */
+.nav-mobal .menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Menu dropdown para telas menores */
+.nav-mobal .dropdown {
+    display: flex; /* Deixe flexível para a animação */
+    flex-direction: column;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 60vw;
+    height: 25vh;
+    z-index: 10;
+    background-color: #070909;
+    padding: 10px 20px 20px 0;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-50%); /* Começa fora da tela */
+    opacity: 0; /* Invisível no início */
+    pointer-events: none; /* Evita cliques enquanto escondido */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Suavidade da transição */
+}
+
+.nav-mobal .dropdown.active {
+    transform: translateY(0); /* Move para a posição visível */
+    opacity: 1; /* Torna visível */
+    pointer-events: all; /* Permite cliques */
+}
+
+
+.nav-mobal .dropdown a {
+    text-decoration: none;
+    padding: 5px 10px;
+    color: white;
+}
+.lista{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 10%;
+}
+.lista-item {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0px 10px;
+    position: relative;
+    transition: color 0.3s;
+}
+.lista-item::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #667471;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 10px;
+}
+
+.lista-item:hover::after {
+    width: 60%;
+}
+.nav-dropdown{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#fechar-dropdown{
+    cursor: pointer;
+}
+#fechar-dropdown:hover{
+    border-radius: 3px;
+    background-color: #c2185b;
+}
+#titulo-dropdown{
+ margin-left: 10vw;
+}
+.contador{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #c2185b;
+    color: white;
+    margin-top: -65px;
+    margin-left: 85px;
+}

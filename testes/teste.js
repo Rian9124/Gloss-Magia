@@ -20,3 +20,9 @@ function updateCart(productKey) {
     document.getElementById('product-image').src = product.image;
     document.getElementById('product-price').textContent = product.price;
 }
+const toggleButton = document.getElementById("menu-toggle");
+const menu = document.getElementById("dropdown");
+
+toggleButton.addEventListener("click", () => {
+    menu.classList.toggle("active");
+});

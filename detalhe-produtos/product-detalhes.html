@@ -18,9 +18,9 @@
                 <a href="index.html"><img src="../imagens/GM (1).png" alt="Logo" width="80px"></a>
             </li>
             <li id="item-1">
-                <a href="#Catalogo-Primavera" class="nav-link">Nova Coleção</a>
-                <a href="#Section-Promoções" class="nav-link">Promoções</a>
-                <a href="catalogo/catalogo.html" class="nav-link">Catálogo</a>
+                <a href="../index.html" class="nav-link">Nova Coleção</a>
+                <a href="../#Section-Promoções" class="nav-link">Promoções</a>
+                <a href="../catalogo/catalogo.html" class="nav-link">Catálogo</a>
             </li>
             <li id="item-2">
                 <a href="login/login.html"><img src="../imagens/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.webp" width="50px"></a>
@@ -35,12 +35,20 @@
         </div>
 
         <div class="dropdown" style="display: none;">
-            <span id="fechar" onclick="fechar()"><img src="../imagens/icone X.png" width="30px"></span>
-            <a href="#">Home</a>
-            <a href="#">Sobre</a>
-            <a href="#">Serviços</a>
-            <a href="#">Contato</a>
+            <div class="nav-dropdown">
+                <h3 id="titulo-dropdown">GlossMagia</h3>
+                <span id="fechar" onclick="fechar()"><h3 id="fechar-dropdown">✖</h3></span>
+            </div>
+            <div class="lista">
+                <a href="../index.html" class="lista-item">Nova Coleção</a>
+                <a href="../#Section-Promoções" class="lista-item">Promoções</a>
+                <a href="../catalogo/catalogo.html" class="lista-item">Catálogo</a>
+            </div>
         </div>
+        <li id="item-2">
+            <a href="../login/login.html"><img src="../imagens/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.webp" width="50px"></a>
+            <a href="../carrinho/sacola.html"><img src="../imagens/sacola.png" width="60px"><div class="contador">0</div></a>
+        </li>
     </nav>
     <main>
         <section class="Seção-carrinho" id="Seção-carrinho">
