@@ -61,10 +61,10 @@
         display: flex; /* Deixe flexível para a animação */
         flex-direction: column;
         position: absolute;
-        top: 10%;
+        top: 8%;
         left: 0;
-        width: 60vw;
-        height: 25vh;
+        width: 50vw;
+        height: 20vh;
         z-index: 10;
         background-color: #070909;
         padding: 10px 20px 20px 0;
@@ -84,19 +84,19 @@
     
     .nav-mobal .dropdown a {
         text-decoration: none;
-        padding: 5px 10px;
+        padding: 1px 5px;
         color: white;
     }
     .lista{
         display: flex;
         flex-direction: column;
-        margin-top: 20px;
+        margin-top: 10px;
         margin-left: 10%;
     }
     .lista-item {
         color: #ffffff;
         text-decoration: none;
-        font-size: 18px;
+        font-size: 15px;
         margin: 0px 10px;
         position: relative;
         transition: color 0.3s;
@@ -109,12 +109,12 @@
         background: #667471;
         transition: width 0.3s;
         position: absolute;
-        bottom: -5px;
-        left: 10px;
+        bottom: 3px;
+        left: 6px;
     }
     
     .lista-item:hover::after {
-        width: 60%;
+        width: 40%;
     }
     .nav-dropdown{
         display: flex;
@@ -129,7 +129,8 @@
         background-color: #c2185b;
     }
     #titulo-dropdown{
-     margin-left: 10vw;
+        font-size: 18px;
+        margin-left: 6vw;
     }
     .contador{
         display: flex;
