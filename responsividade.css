@@ -29,7 +29,7 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         font-weight: bold;
         color: #ffffff;
         margin-left: 0;
@@ -39,7 +39,7 @@
         font-size: 1.3rem;
         color: #FFC107;
         margin-left: 0;
-        margin-top: 10px;
+        margin-top: 0px;
     }
     .text-button{
         display: flex;
@@ -53,7 +53,7 @@
         margin-left: 20%;
     }
     #text-p {
-        font-size: 18px;
+        font-size: 14px;
         color: #e2e2e2;
         text-align: center;
     }
@@ -73,8 +73,10 @@
         align-items: center;
         flex-wrap: wrap;
         gap: 20px; /* Ajuste o espaçamento entre os cards */
+        margin-top: 20px;
         margin-right: 0;
         margin-left: 0;
+        margin-bottom: 20px;
     }
     .card1 { 
         width: 80%;
@@ -95,7 +97,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 20px;
+        padding: 5px 10px;
         background-color: #070909;
         color: white;
         top: 0;
@@ -139,10 +141,10 @@
         display: flex; /* Deixe flexível para a animação */
         flex-direction: column;
         position: absolute;
-        top: 10%;
+        top: 8%;
         left: 0;
-        width: 60vw;
-        height: 25vh;
+        width: 50vw;
+        height: 20vh;
         z-index: 10;
         background-color: #070909;
         padding: 10px 20px 20px 0;
@@ -162,19 +164,19 @@
     
     .nav-mobal .dropdown a {
         text-decoration: none;
-        padding: 5px 10px;
+        padding: 1px 5px;
         color: white;
     }
     .lista{
         display: flex;
         flex-direction: column;
-        margin-top: 20px;
+        margin-top: 10px;
         margin-left: 10%;
     }
     .lista-item {
         color: #ffffff;
         text-decoration: none;
-        font-size: 18px;
+        font-size: 15px;
         margin: 0px 10px;
         position: relative;
         transition: color 0.3s;
@@ -187,12 +189,12 @@
         background: #667471;
         transition: width 0.3s;
         position: absolute;
-        bottom: -5px;
-        left: 10px;
+        bottom: 3px;
+        left: 6px;
     }
     
     .lista-item:hover::after {
-        width: 60%;
+        width: 40%;
     }
     .nav-dropdown{
         display: flex;
@@ -207,7 +209,8 @@
         background-color: #c2185b;
     }
     #titulo-dropdown{
-     margin-left: 10vw;
+        font-size: 18px;
+        margin-left: 6vw;
     }
     .contador{
         display: flex;
@@ -215,8 +218,8 @@
         justify-content: center;
         position: absolute;
         border-radius: 50%;
-        width: 30px;
-        height: 30px;
+        width: 20px;
+        height: 20px;
         background-color: #c2185b;
         color: white;
         margin-top: -65px;

@@ -27,7 +27,7 @@ const cardWidth = 130; // largura do card + margens
 const maxOffset = -(cardWidth * (carousel.children.length - 1)); // Limite máximo (todos os cards)
 
 prevButton.addEventListener('click', () => {
-    offset = Math.min(500, offset + cardWidth); // Limita o deslocamento mínimo a 0
+    offset = Math.min(550, offset + cardWidth); // Limita o deslocamento mínimo a 0
     carousel.style.transform = `translateX(${offset}px)`;
 });
 
