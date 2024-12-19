@@ -61,7 +61,7 @@
         display: flex; /* Deixe flexível para a animação */
         flex-direction: column;
         position: absolute;
-        top: 8%;
+        top: 9%;
         left: 0;
         width: 50vw;
         height: 20vh;
@@ -132,7 +132,7 @@
         font-size: 18px;
         margin-left: 6vw;
     }
-    .contador{
+    .contador-mobal{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -143,7 +143,7 @@
         background-color: #c2185b;
         color: white;
         margin-top: -65px;
-        margin-left: 85px;
+        margin-left: 30px;
     }
 
 

@@ -158,10 +158,11 @@ main{
     background-color: #b71c1c;
 }
 
-.contador{
+.contador-mobal{
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #fff;
     position: absolute;
     border-radius: 50%;
     width: 30px;
@@ -217,7 +218,7 @@ main{
         display: flex; /* Deixe flexível para a animação */
         flex-direction: column;
         position: absolute;
-        top: 8%;
+        top: 10%;
         left: 0;
         width: 50vw;
         height: 20vh;

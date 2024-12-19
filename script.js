@@ -86,7 +86,7 @@ function fechar() {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const contador = document.querySelector(".contador"); // Seleciona o elemento do contador
+    const contador = document.querySelector(".contador-mobal"); // Seleciona o elemento do contador
 
     if (!contador) {
         console.error("O elemento '.contador' não foi encontrado no DOM.");

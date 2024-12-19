@@ -170,7 +170,7 @@ function AdicionarSacola() {
 
 // Função para atualizar o contador de itens no carrinho
 function updateCounter() {
-    const contador = document.querySelector(".contador"); // Seleciona o elemento do contador
+    const contador = document.querySelector(".contador-mobal"); // Seleciona o elemento do contador
 
     if (!contador) {
         console.error("O elemento '.contador' não foi encontrado no DOM.");
@@ -228,4 +228,3 @@ function fechar() {
         }, 500); // Tempo correspondente ao `transition` do CSS
     }
 }
-
