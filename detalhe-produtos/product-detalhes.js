@@ -3,34 +3,34 @@ const products = {
     'batom-primavera': {
         title: 'Batom Frescor da Primavera',
         image: '../imagens/15596984-a5d2-4d4b-89b0-3787c8cc40a6-revlon-ultra-hd-romance-batom-liquido-matte-59ml.webp',
-        price: 'R$120,00',
+        price: 'R$76,98',
         installments:'ou 1x de R$ 39,99 sem juros ou em até 6x de R$ 7,20 no cartão'
     },
     'gloss-floral': {
         title: 'Gloss Floral Brilhante',
         image: '../imagens/1xg.png',
-        price: 'R$115,00',
+        price: 'R$99,00',
         installments:'ou 1x de R$ 39,99 sem juros ou em até 6x de R$ 7,20 no cartão'
     },
     'gloss-chocolate': {
         title: 'Gloss Toque de Chocolate',
         image: '../imagens/874-8746209_fenty-beauty-lip-gloss.png',
-        price: 'R$110,00'
+        price: 'R$79,99'
     },
     'iluminador-manha': {
         title: 'Iluminador Brilho da Manhã',
         image: '../imagens/iluminador_glow_and_go_golden_0.png',
-        price: 'R$135,00'
+        price: 'R$35,00'
     },
     'base-matte': {
         title: 'Base Corretivo Matte',
         image: '../imagens/dfb1321f-6b18-4425-a4c6-04973ca68535-mari-maria-makeup-velvet-skin-cacau-base-liquida-25g.webp',
-        price: 'R$199,90'
+        price: 'R$50,90'
     },
     'paleta-maquiagem': {
         title: 'Paleta de Maquiagem',
         image: '../imagens/5d91ddeb-4983-4ace-9161-6ab8ece780ee-88122-vult-rica-de-marre-paleta-de-maquiagem-12g.webp',
-        price: 'R$89,90'
+        price: 'R$20,90'
     },
     'hidratante-creme': {
         title: 'Hidratante Creme Nutritivo',
@@ -45,7 +45,7 @@ const products = {
     'gloss-labial': {
         title: 'Gloss Labial Nova Coleção',
         image: '../imagens/maca.png',
-        price: 'R$19,90'
+        price: 'R$25,90'
     }
 };
 
